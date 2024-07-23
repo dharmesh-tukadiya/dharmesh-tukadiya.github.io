@@ -28,6 +28,10 @@
             margin: 0;
             font-size: 2.5em;
         }
+        header p {
+            font-size: 1.2em;
+            margin: 0.5em 0;
+        }
         .content {
             background: #fff;
             padding: 20px;
@@ -35,8 +39,11 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .content h2 {
-            font-size: 1.5em;
+            font-size: 1.8em;
             margin-top: 0;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
         }
         .content ul {
             list-style: none;
@@ -45,19 +52,41 @@
         .content ul li {
             margin: 10px 0;
         }
+        .project-list {
+            display: flex;
+            flex-direction: column;
+        }
+        .project-item {
+            margin-bottom: 20px;
+        }
+        .project-item h3 a {
+            color: #333;
+            text-decoration: none;
+        }
+        .project-item h3 a:hover {
+            text-decoration: underline;
+        }
+        .social-links {
+            list-style: none;
+            padding: 0;
+        }
+        .social-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+        .social-links a {
+            color: #333;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
         footer {
             text-align: center;
             padding: 10px;
             background: #333;
             color: #fff;
             margin-top: 20px;
-        }
-        footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -88,33 +117,33 @@
             </section>
             <section>
                 <h2>Featured Projects</h2>
-                <ul>
-                    <li>
-                        <a href="https://github.com/dharmesh-tukadiya/module-dynamicgooglerecaptcha" target="_blank">Dynamic Google reCAPTCHA for Magento 2</a>: 
-                        This module integrates Dynamic Google reCAPTCHA with your Magento 2 store's frontend forms to enhance security against spam and abuse. It allows you to dynamically load and configure Google reCAPTCHA on any form on any frontend controller(URL). You can add Google reCAPTCHA verfication to any frontend url.
-                    </li>
-                    <li>
-                        <a href="https://github.com/dharmesh-tukadiya/magento2-gmail-file-downloader" target="_blank">Magento 2 Gmail File Downloader</a>: 
-                        The Magento 2 Gmail File Downloader extension allows you to seamlessly download Gmail attachments directly into your Magento store using API integration and custom filters. Automate file imports and enhance your Magento backend with this powerful tool.
-                    </li>
-                    <li>
-                        <a href="https://github.com/dharmesh-tukadiya/hyva-cms-tailwind-purge" target="_blank">Magento2 Hyvä Tailwind CSS Purge For CMS Pages & Blocks</a>: 
-                        This module is designed for using custom Hyvä based child theme's tailwind css configurations in the cms pages and blocks.
-                    </li>
-                    <li>
-                        <a href="https://github.com/dharmesh-tukadiya/hyva-widgets" target="_blank">Magento 2 Hyvä Themes Custom Widget Module</a>: 
-                        Custom Widgets For Hyva Themes
-                    </li>
-                    <li>
-                        <a href="https://github.com/dharmesh-tukadiya/hyva-widgets" target="_blank">Flipkart Label Cropping Tool</a>: 
-                        This extension download flipkart shipments' labels and crops according to the printer size.
-                    </li>
-                </ul>
+                <div class="project-list">
+                    <div class="project-item">
+                        <h3><a href="https://github.com/dharmesh-tukadiya/module-dynamicgooglerecaptcha" target="_blank">Dynamic Google reCAPTCHA for Magento 2</a></h3>
+                        <p>This module integrates Dynamic Google reCAPTCHA with your Magento 2 store's frontend forms to enhance security against spam and abuse. It allows you to dynamically load and configure Google reCAPTCHA on any form on any frontend controller(URL). You can add Google reCAPTCHA verification to any frontend URL.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3><a href="https://github.com/dharmesh-tukadiya/magento2-gmail-file-downloader" target="_blank">Magento 2 Gmail File Downloader</a></h3>
+                        <p>The Magento 2 Gmail File Downloader extension allows you to seamlessly download Gmail attachments directly into your Magento store using API integration and custom filters. Automate file imports and enhance your Magento backend with this powerful tool.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3><a href="https://github.com/dharmesh-tukadiya/hyva-cms-tailwind-purge" target="_blank">Magento2 Hyvä Tailwind CSS Purge For CMS Pages & Blocks</a></h3>
+                        <p>This module is designed for using custom Hyvä based child theme's Tailwind CSS configurations in the CMS pages and blocks.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3><a href="https://github.com/dharmesh-tukadiya/hyva-widgets" target="_blank">Magento 2 Hyvä Themes Custom Widget Module</a></h3>
+                        <p>Custom Widgets For Hyvä Themes.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3><a href="https://github.com/dharmesh-tukadiya/hyva-widgets" target="_blank">Flipkart Label Cropping Tool</a></h3>
+                        <p>This extension downloads Flipkart shipments' labels and crops them according to the printer size.</p>
+                    </div>
+                </div>
             </section>
             <section>
                 <h2>Connect with Me</h2>
                 <p>Feel free to reach out if you have any exciting projects or collaboration opportunities. I'm always open to discussing new ideas and contributing to innovative solutions.</p>
-                <ul>
+                <ul class="social-links">
                     <li><a href="https://www.linkedin.com/in/dntukadiya" target="_blank">LinkedIn</a></li>
                     <li><a href="https://www.upwork.com/freelancers/~0116257047ebbe323a" target="_blank">Upwork</a></li>
                     <li><a href="https://www.freelancer.in/u/dntukadiya" target="_blank">Freelancer</a></li>
